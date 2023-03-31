@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#0E0E0E">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:layout_above="@id/bottom_relative_layout"/>
+
+    <!--
+    <ImageView
+        android:id="@+id/welcome_logo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@id/welcome_text"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/openai_png_red_logo" />
+    -->
+
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="'Introducing ChatGPT for Android'\nType in your Prompt."
+        android:textSize="18dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_relative_layout"
+        android:padding="8dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/messaging_edit_text"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:layout_toLeftOf="@+id/send_button"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="#DFC1C1C1"
+            android:textColorHint="#333333"
+            android:textColor="#1C1C1C"
+            android:hint="\tType Here..."/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/send_button"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:padding="8dp"
+            android:src="@drawable/baseline_send_24"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+            <!-- The above line is to make the Background behind the Button Invisible -->
+
+    </RelativeLayout>
+
+</RelativeLayout>
